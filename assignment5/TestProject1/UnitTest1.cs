@@ -9,7 +9,7 @@ namespace TestProject1
 {
 
     [TestClass]
-    public class OrderServiceTest
+    public class OrderServiceTest//æ–¹æ³•æ²¡å†™å¥½ï¼Œæµ‹è¯•è°ƒä¸å¤ªå¥½
     {
         [TestMethod]
         public void AddTest()
@@ -27,16 +27,16 @@ namespace TestProject1
             OrderService orderService = new OrderService();
             orderService.AddOrder();
             string s= output.ToString();
-            string[] targets = { "»¹Òª¼ÌĞøÌí¼ÓÂğ£¿£¨Y/N£©", "ÇëÊäÈë¶©µ¥ºÅ£º","ÇëÊäÈë¿Í»§Ãû£º","ÇëÊäÈë²úÆ·Ãû³Æ£º","ÇëÊäÈëµ¥¼Û£º","ÇëÊäÈë¹ºÂòÊıÁ¿£º" };
+            string[] targets = { "è¿˜è¦ç»§ç»­æ·»åŠ å—ï¼Ÿï¼ˆY/Nï¼‰", "è¯·è¾“å…¥è®¢å•å·ï¼š","è¯·è¾“å…¥å®¢æˆ·åï¼š","è¯·è¾“å…¥äº§å“åç§°ï¼š","è¯·è¾“å…¥å•ä»·ï¼š","è¯·è¾“å…¥è´­ä¹°æ•°é‡ï¼š" };
             foreach (string target in targets)
             {
                 s = s.Replace(target, "");
             }
             string ExpectedOutput = /*"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"+ */
-                                    "¶©µ¥ºÅ: 0001       ¿Í»§: Amy        ²úÆ·: apple      ÊıÁ¿: 10         µ¥¼Û: 5.5        ×Ü½ğ¶î: 55\n"
-                                   +"¶©µ¥ºÅ: 0002       ¿Í»§: Ben        ²úÆ·: banana     ÊıÁ¿: 5          µ¥¼Û: 7          ×Ü½ğ¶î: 35\n"
-                                   +"¶©µ¥ºÅ: 0003       ¿Í»§: Cary       ²úÆ·: cherry     ÊıÁ¿: 2          µ¥¼Û: 20         ×Ü½ğ¶î: 40\n"
-                                   +"¶©µ¥ºÅ: 0004       ¿Í»§: Doggy      ²úÆ·: durian     ÊıÁ¿: 3          µ¥¼Û: 10         ×Ü½ğ¶î: 30\n";
+                                    "è®¢å•å·: 0001       å®¢æˆ·: Amy        äº§å“: apple      æ•°é‡: 10         å•ä»·: 5.5        æ€»é‡‘é¢: 55\n"
+                                   +"è®¢å•å·: 0002       å®¢æˆ·: Ben        äº§å“: banana     æ•°é‡: 5          å•ä»·: 7          æ€»é‡‘é¢: 35\n"
+                                   +"è®¢å•å·: 0003       å®¢æˆ·: Cary       äº§å“: cherry     æ•°é‡: 2          å•ä»·: 20         æ€»é‡‘é¢: 40\n"
+                                   +"è®¢å•å·: 0004       å®¢æˆ·: Doggy      äº§å“: durian     æ•°é‡: 3          å•ä»·: 10         æ€»é‡‘é¢: 30\n";
             Assert.AreEqual(ExpectedOutput,s);
         }
 
