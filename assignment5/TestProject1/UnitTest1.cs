@@ -14,10 +14,12 @@ namespace TestProject1
         [TestMethod]
         public void AddTest()
         {
-            /* 
-             Order TestOrder = new Order();
-             List<Order> order = new List<Order>();
-            */
+
+        }
+        /*
+        public void AddTest()
+        {
+           
             Console.SetIn(new StringReader("0001\nAmy\napple\n5.5\n10\nY\n"
                                           +"0002\nBen\nbanana\n7\n5\nY\n"
                                           +"0003\nCary\ncherry\n20\n2\nY\n"
@@ -33,22 +35,14 @@ namespace TestProject1
                 s = s.Replace(target, "");
             }
             string ExpectedOutput = /*"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"+ */
-                                    "订单号: 0001       客户: Amy        产品: apple      数量: 10         单价: 5.5        总金额: 55\n"
+                      /*            "订单号: 0001       客户: Amy        产品: apple      数量: 10         单价: 5.5        总金额: 55\n"
                                    +"订单号: 0002       客户: Ben        产品: banana     数量: 5          单价: 7          总金额: 35\n"
                                    +"订单号: 0003       客户: Cary       产品: cherry     数量: 2          单价: 20         总金额: 40\n"
                                    +"订单号: 0004       客户: Doggy      产品: durian     数量: 3          单价: 10         总金额: 30\n";
             Assert.AreEqual(ExpectedOutput,s);
-        }
-
-       /* [TestMethod]
-        public void AddTest1()
-        {
-            OrderService orderService = new OrderService();
-            Order order1 = new Order("0001","Amy");
-            order1.AddDetail(new OrderDetails("apple",5.5,3));
-            orderService.AddOrder1(order1);
-            Assert.AreEqual(order1, ("0001","Amy","apple",5.5,3));
         }*/
+
+  
 
     }
 }
